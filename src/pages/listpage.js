@@ -5,14 +5,7 @@ import { Loading, Influencer } from "components";
 function ListPage() {
     const [engaged, setEngaged] = useState(null);
     const [followers, setFollowers] = useState(null);
-
     const baseURL = "https://new-api.coco.gl/dashboard/intw";
-
-    const getEngaged = async () => {
-        const response = await axios.get(`${baseURL}/top/engaged`).catch((err) => console.log("Error", err));
-
-        if (response && response.data) setEngaged(engaged);
-    };
 
     useEffect(() => {
         axios
