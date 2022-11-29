@@ -5,8 +5,8 @@ import "assets/styles/main.css";
 
 function App() {
     return (
-        <BrowserRouter>
-            <Routes>
+        <BrowserRouter >
+            <Routes basename={'/directory-name'}>
                 <Route path="/" element={<ListPage />}></Route>
                 <Route path="/detailpage/:id" element={<DetailPage />}></Route>
                 <Route path="*" element={<ErrorPage />}></Route>
