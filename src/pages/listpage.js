@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Influencer } from "components";
 import axios from "axios";
-import { Loading } from "components";
+import { Loading, Influencer } from "components";
 
 function ListPage() {
     const [engaged, setEngaged] = useState(null);

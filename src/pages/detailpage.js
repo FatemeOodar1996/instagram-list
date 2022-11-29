@@ -3,27 +3,20 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { BsQuestionCircle } from "react-icons/bs";
 import { Loading } from "components";
-import notFound from "../assets/images/userNotFound.png";
-import { Error500 } from "components/eroor500";
+import { notFound } from "assets/images/index";
 
 function DetailPage() {
     const [accountDetail, setAccountDetil] = useState(null);
     const { id } = useParams();
 
     useEffect(() => {
-        axios
-            .get("https://new-api.coco.gl/dashboard/intw/detail/" + id)
-            .then(({ data: accountDetail }) => {
+        const getDetail = () => {
+            axios.get("https://new-api.coco.gl/dashboard/intw/detail/" + id).then(({ data: accountDetail }) => {
                 setAccountDetil(accountDetail);
-            })
-            .catch((err) => {
-                if (err.response.status === 500) {
-                window.location.href="/";
-
-                }
-
             });
-    }, []);
+        };
+        getDetail();
+    });
 
     return accountDetail ? (
         <div className="full-information">
@@ -81,11 +74,11 @@ function DetailPage() {
                             </div>
                         </div>
                         <div className="card-information">
-                            <span className="count">{accountDetail.totalPost}</span>
                             <div className="title">
                                 <h2>Total Post</h2>
                                 <BsQuestionCircle className="question" />
                             </div>
+                            <span className="count">{accountDetail.totalPost}</span>
                         </div>
                     </div>
                     <div className="card-likes">
@@ -108,7 +101,6 @@ function DetailPage() {
     ) : (
         <div className="loading-parent">
             <Loading />
-            {/* <Error500 /> */}
         </div>
     );
 }

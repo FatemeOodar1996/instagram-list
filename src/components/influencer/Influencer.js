@@ -1,7 +1,7 @@
 import React from "react";
 import { FiMoreVertical } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import notFound from "../../assets/images/userNotFound.png";
+import { notFound } from "assets/images/index";
 
 function Influencer({ user }) {
     return (
@@ -27,7 +27,7 @@ function Influencer({ user }) {
                             user.parentCategory === null || user.parentCategory.length === 0 ? "parent-none" : "parent"
                         }>
                         <div className="parent-icon">
-                            <img src={`${user.parentIconUrl}`} alt="parent icon" />
+                            <img src={user.parentIconUrl} alt="parent icon" />
                         </div>
                         <span className="parent-category">{user.parentCategory}</span>
                     </div>

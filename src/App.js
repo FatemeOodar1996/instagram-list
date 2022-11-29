@@ -1,9 +1,7 @@
-import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import DetailPage from "./pages/detailpage";
-import ListPage from "./pages/listpage";
-import "./assets/styles/main.css";
-import ErrorPage from "pages/errorpage";
+import { DetailPage, ErrorPage, ListPage } from "pages/index";
+
+import "assets/styles/main.css";
 
 function App() {
     return (

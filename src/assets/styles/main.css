@@ -146,6 +146,9 @@
   flex-direction: column;
   align-items: flex-start;
 }
+.full-information .body .card-post .card-information:nth-child(2) {
+  margin-top: 1.5rem;
+}
 .full-information .body .card-total-eng {
   background-color: #f7d456;
 }
@@ -281,7 +284,7 @@
   gap: 5px;
   background-color: #f0f0f0;
   border-radius: 1rem;
-  padding: 3px 10px;
+  padding: 2px 5px;
 }
 .info-main .user-detail .parent-icon {
   overflow: hidden;
@@ -305,7 +308,7 @@
   margin-left: 5px;
   background-color: #f0f0f0;
   border-radius: 1rem;
-  padding: 3px 10px;
+  padding: 2px 5px;
   line-height: 16px;
   line-height: 22px;
 }
