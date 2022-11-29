@@ -5,7 +5,7 @@ import "assets/styles/main.css";
 
 function App() {
     return (
-        <BrowserRouter >
+        <BrowserRouter basename={"/instagram-list/build/"}>
             <Routes>
                 <Route path="/" element={<ListPage />}></Route>
                 <Route path="/detailpage/:id" element={<DetailPage />}></Route>
