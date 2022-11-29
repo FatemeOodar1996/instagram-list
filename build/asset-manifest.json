@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.299c521b.css",
+    "main.js": "/static/js/main.cc656658.js",
+    "static/media/wave.png": "/static/media/wave.e72e35c2ea04fd3426ff.png",
+    "static/media/wavePattern.png": "/static/media/wavePattern.1f4f4b771a7bf0a88868.png",
+    "index.html": "/index.html",
+    "main.299c521b.css.map": "/static/css/main.299c521b.css.map",
+    "main.cc656658.js.map": "/static/js/main.cc656658.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.299c521b.css",
+    "static/js/main.cc656658.js"
+  ]
+}
