@@ -9,9 +9,11 @@ function DetailPage() {
     const [accountDetail, setAccountDetil] = useState(null);
     const { id } = useParams();
 
+    const baseURL = "https://new-api.coco.gl/dashboard/intw";
+
     useEffect(() => {
         const getDetail = () => {
-            axios.get("https://new-api.coco.gl/dashboard/intw/detail/" + id).then(({ data: accountDetail }) => {
+            axios.get(`${baseURL}/detail/` + id).then(({ data: accountDetail }) => {
                 setAccountDetil(accountDetail);
             });
         };

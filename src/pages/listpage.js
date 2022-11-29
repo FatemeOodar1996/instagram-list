@@ -6,9 +6,17 @@ function ListPage() {
     const [engaged, setEngaged] = useState(null);
     const [followers, setFollowers] = useState(null);
 
+    const baseURL = "https://new-api.coco.gl/dashboard/intw";
+
+    const getEngaged = async () => {
+        const response = await axios.get(`${baseURL}/top/engaged`).catch((err) => console.log("Error", err));
+
+        if (response && response.data) setEngaged(engaged);
+    };
+
     useEffect(() => {
         axios
-            .get("https://new-api.coco.gl/dashboard/intw/top/engaged")
+            .get(`${baseURL}/top/engaged`)
             .then(({ data: engaged }) => {
                 setEngaged(engaged);
             })
@@ -17,7 +25,7 @@ function ListPage() {
             });
 
         axios
-            .get("https://new-api.coco.gl/dashboard/intw/top/followers")
+            .get(`${baseURL}/top/followers`)
             .then(({ data: followers }) => {
                 setFollowers(followers);
             })
